@@ -1,0 +1,44 @@
+MDScreen:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '8dp'
+        padding: '8dp'
+
+        MDLabel:
+            text: 'Login'
+            halign: 'center'
+            font_style: 'H4'
+            theme_text_color: 'Primary'
+
+        MDLabel:
+            id: login_error_label
+            text: ''
+            halign: 'center'
+            theme_text_color: 'Error'
+
+        MDTextField:
+            id: email_login_field
+            hint_text: 'Email'
+            mode: 'fill'
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+
+        MDTextField:
+            id: password_login_field
+            hint_text: 'Password'
+            mode: 'fill'
+            password: True
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+
+        MDRaisedButton:
+            text: 'Login'
+            size_hint: None, None
+            size: '150dp', '40dp'
+            pos_hint: {'center_x': 0.5}
+            md_bg_color: app.theme_cls.primary_color
+            on_release: app.finish_login(email_login_field.text, password_login_field.text)

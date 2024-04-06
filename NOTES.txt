@@ -1,0 +1,49 @@
+
+----------------
+Screen Dimensions (inches)
+----------------
+6.2 x 3
+
+
+----------------
+Database Info
+----------------
+
+
+
+
+----------------
+Step 1: Create login/signup
+----------------
+	- create wireframe / details
+		- colors: 
+			Dark Teal:   #2e8c86	(46/255,140/255,134/255)  --> (.18,.549,.525)   -- BUTTONS
+			Light Teal:  #3bd1c7	(59/255,209/255,199/255)  --> (.231,.82,.78)
+			White:       #ffffff	(255/255,255/255,255/255) --> (1,1,1)           -- BACKGROUND (light mode)
+			Light Grey:  #97a1aa	(151/255,161/255,170/255) --> (.592,.631,.667)
+			Dark Grey:   #5e6870	(94/255,104/255,112/255)  --> (.369,.408,.439)
+	- description for chaptgpt:
+		I am building a fitness/health/wellness app using KivyMD in python.
+
+        ----------------------
+        CHATGPT INITIAL PROMPT
+        ----------------------
+        I am building a fitness/health/wellness app using KivyMD in python. It will have a variety of functionality,
+        but for starters I need to create the main opening screen that gives the option to login or to signup (buttons).
+        Clicking the login button will take you to a screen to enter your login information. Clicking the signup button
+        will take you to a screen to enter your information to create an account. This signup information will
+        consist of first name, last name, email, password, and re-enter password. The password and re-enter password
+        fields must match in order to sign up. I have a color palette I would also like you to include. These are:
+        Dark Teal (hex= #2e8c86 or rgb=(46,140,134)),
+        Light Teal (hex=#3bd1c7 or rgb=(59,209,199)),
+        White (hex=#ffffff or rgb=(255,255,255)),
+        Light Grey (hex=#97a1aa	 or rgb=(151,161,170)),
+        and Dark Grey (hex=#5e6870 or rgb=(94,104,112)).
+        Can you give me the code to get this started?
+
+
+----------------
+Step 2: Create MySQL database for user/login info
+----------------
+
+

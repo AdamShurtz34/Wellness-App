@@ -1,0 +1,29 @@
+#:import Builder kivy.lang.Builder
+MDScreen:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '15dp'
+        padding: '8dp'
+
+        MDLabel:
+            text: 'Welcome to Your App'
+            halign: 'center'
+            font_style: 'H4'
+            theme_text_color: 'Custom'
+            text_color: 46/255,140/255,134/255,1
+
+        MDRaisedButton:
+            text: 'Login'
+            size_hint: None, None
+            size: '150dp', '40dp'
+            pos_hint: {'center_x': 0.5}
+            md_bg_color: (46/255,140/255,134/255,1)
+            on_release: app.login()
+
+        MDRaisedButton:
+            text: 'Signup'
+            size_hint: None, None
+            size: '150dp', '40dp'
+            pos_hint: {'center_x': 0.5}
+            md_bg_color: (46/255,140/255,134/255,1)
+            on_release: app.signup()

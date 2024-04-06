@@ -1,0 +1,44 @@
+MDScreen:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '20dp'
+        padding: '8dp'
+
+        MDLabel:
+            text: 'Enter Verification Code'
+            halign: 'center'
+            font_style: 'H4'
+            theme_text_color: "Custom"
+            text_color: 46/255, 140/255, 134/255, 1
+
+        MDLabel:
+            id: verification_label
+            text: 'An email has been sent with a verification code, this may take several minutes to reach you'
+            halign: 'center'
+            theme_text_color: "Custom"
+            text_color: 46/255, 140/255, 134/255, 1
+
+        MDTextField:
+            id: verification_code_field
+            hint_text: 'Verification Code'
+            mode: 'fill'
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+
+        MDRaisedButton:
+            text: 'Verify'
+            size_hint: None, None
+            size: '150dp', '40dp'
+            pos_hint: {'center_x': 0.5}
+            md_bg_color: 46/255, 140/255, 134/255, 1
+            on_release: app.verify_and_create_user()
+
+        MDTextButton:
+            text: 'Resend Verification Code'
+            size_hint: None, None
+            size: '200dp', '40dp'
+            pos_hint: {'center_x': 0.5}
+            md_bg_color: 46/255, 140/255, 134/255, 1
+            on_release: app.resend_verification_code()

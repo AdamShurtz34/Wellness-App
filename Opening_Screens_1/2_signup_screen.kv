@@ -1,0 +1,83 @@
+MDScreen:
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: '20dp'
+        padding: '8dp'
+
+        MDLabel:
+            text: 'Signup'
+            halign: 'center'
+            font_style: 'H4'
+            theme_text_color: "Custom"
+            text_color: 46/255, 140/255, 134/255, 1
+            
+        MDLabel:
+            id: signup_error_label
+            text: ''
+            halign: 'center'
+            theme_text_color: 'Error'
+
+        MDTextField:
+            id: first_name_field
+            hint_text: 'First Name'
+            mode: 'fill'
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            max_text_length: 50
+
+        MDTextField:
+            id: last_name_field
+            hint_text: 'Last Name'
+            mode: 'fill'
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            max_text_length: 50
+
+        MDTextField:
+            id: email_field
+            hint_text: 'Email'
+            mode: 'fill'
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            max_text_length: 100
+
+        MDTextField:
+            id: password_field
+            hint_text: 'Password'
+            mode: 'fill'
+            password: True
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            helper_text: 'Must be 8 characters with one uppercase and one special character'
+            helper_text_mode: "on_focus"
+            max_text_length: 50
+
+        MDTextField:
+            id: re_password_field
+            hint_text: 'Re-enter Password'
+            mode: 'fill'
+            password: True
+            line_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            line_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            hint_text_color_normal: 46/255, 140/255, 134/255, 1  # Dark Teal color
+            hint_text_color_focus: 59/255,209/255,199/255, 1  # light Teal color
+            helper_text: 'Must be 8 characters with one uppercase and one special character'
+            helper_text_mode: "on_focus"
+            max_text_length: 50
+
+        MDRaisedButton:
+            text: 'Signup'
+            size_hint: None, None
+            size: '150dp', '40dp'
+            pos_hint: {'center_x': 0.5}
+            md_bg_color: app.theme_cls.primary_color
+            on_release: app.finish_signup(first_name_field.text, last_name_field.text, email_field.text, password_field.text, re_password_field.text)
+

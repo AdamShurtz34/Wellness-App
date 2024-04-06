@@ -1,0 +1,59 @@
+
+MDScreen:
+    MDNavigationLayout:
+        ScreenManager:
+            Screen:
+                BoxLayout:
+                    orientation: "vertical"
+
+                    MDTopAppBar:
+                        title: "Wellness App"
+                        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+
+                    ScrollView:
+                        BoxLayout:
+                            orientation: 'vertical'
+                            size_hint_y: None
+                            height: self.minimum_height
+                            padding: dp(16)
+
+                            MDLabel:
+                                text: "Today's Workout"
+                                size_hint_y: None
+                                height: self.texture_size[1]
+                                halign: "center"
+                                padding: dp(16)
+
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+            BoxLayout:
+                orientation: "vertical"
+
+                MDLabel:
+                    text: "Menu"
+                    size_hint_y: None
+                    height: "40dp"
+
+                OneLineListItem:
+                    text: "Home"
+                    on_release: app.menu_home()
+                OneLineListItem:
+                    text: "Fitness"
+                    on_release: app.menu_fitness()
+                OneLineListItem:
+                    text: "Nutrition"
+                    on_release: app.menu_nutrition()
+                OneLineListItem:
+                    text: "Enneagram"
+                    on_release: app.menu_enneagram()
+
+                Widget:
+
+                OneLineListItem:
+                    text: "Settings"
+                    on_release: app.menu_settings()
+                OneLineListItem:
+                    text: "Logout"
+                    on_release: app.menu_logout()
